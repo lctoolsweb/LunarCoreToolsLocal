@@ -6,25 +6,25 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Install Wine
-      run: sudo apt-get install wine64
-    
     - name: Install Dependencies
       run: |
         npm i
         npm install electron-packager --save-dev
 
     - name: Build
-      run: npm run packager
+      run: |
+        npm run packager
+        zip -r electron-build.zip LunarCoreTools-win32-x64
 
-    - name: Upload build artifacts
+    - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: build-artifacts
-        path: NeuvilletteQuickStart_build
+        name: electron-build
+        path: ./electron-build.zip
+
