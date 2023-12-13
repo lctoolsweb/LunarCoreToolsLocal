@@ -30,3 +30,8 @@ jobs:
         name: electron-build
         path: ./electron-build.zip
 
+    - name: Create Release
+      run: |
+        gh release create v1.0.0 ./electron-build.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
