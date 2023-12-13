@@ -30,8 +30,4 @@ jobs:
         name: electron-build
         path: ./electron-build.zip
 
-    - name: Create Release
-      run: |
-        gh release create v1.0.0 ./electron-build.zip
-      env:
-         GITHUB_TOKEN: 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
+    
