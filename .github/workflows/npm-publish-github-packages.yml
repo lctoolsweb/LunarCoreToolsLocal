@@ -12,6 +12,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Install Wine
+      run: sudo apt-get install wine64
+    
     - name: Install Dependencies
       run: |
         npm i
