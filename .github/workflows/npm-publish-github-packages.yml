@@ -23,9 +23,8 @@ jobs:
     - name: Build
       run: npm run packager
 
-    - name: Upload Artifact
+    - name: Upload build artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: electron-build
-        path: ./dist
-
+        name: build-artifacts
+        path: NeuvilletteQuickStart_build
