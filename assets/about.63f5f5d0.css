@@ -1,0 +1,1 @@
+#app{text-align:center;margin-top:20px}.commuse{width:500px;margin:auto}.commuse-item{display:flex;align-items:center;color:#000;margin:18px 0;>div {&:nth-child(1) {width: 150px; text-align: right; padding-right: 10px;}} button {margin-left: 10px;}}
